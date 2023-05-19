@@ -1,0 +1,115 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+      <div class="container">
+
+        <ol>
+          <li><a href="index.html">Home</a></li>
+          <li>Blog</li>
+        </ol>
+        <h2>Blog</h2>
+
+      </div>
+    </section><!-- End Breadcrumbs -->
+
+    <!-- ======= Blog Section ======= -->
+    <section id="blog" class="blog">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row">
+
+          <div class="col-lg-8 entries">
+            {% for blog in blog %}
+            <!-- #01 Blog open -->
+            <article class="entry">
+
+              <div class="entry-img">
+                <img width="100%" src="{{ blog.img }}" alt="" class="img-fluid">
+              </div>
+
+              <h2 class="entry-title">
+                <a href="{% url 'detail' blog.pk %}">{{ blog.title }}</a>
+              </h2>
+
+              <div class="entry-meta">
+                <ul>
+                  <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="blog-single.html">{{ blog.kim }}</a></li>
+                  <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="blog-single.html"><time>{{ blog.sana }}</time></a></li>
+                </ul>
+              </div>
+
+              <div class="entry-content">
+                <p>
+                 {{ blog.more|slice:"100" }}
+                </p>
+                <div class="read-more">
+                  <a href="{% url 'detail' blog.pk %}">Read More</a>
+                </div>
+              </div>
+
+            </article><!-- #01 Blog close -->
+            {% endfor %}
+
+        
+
+
+            
+
+
+          
+          </div><!-- End blog entries list -->
+
+          <div class="col-lg-4">
+
+            <div class="sidebar">
+
+              <h3 class="sidebar-title">Qidiruv</h3>
+              <div class="sidebar-item search-form">
+                <form action="#">
+                  <input type="text" name="q">
+                  <button type="submit"><i class="bi bi-search"></i></button>
+                </form>
+              </div><!-- End sidebar search formn-->
+      
+              <h3 class="sidebar-title">So'ngi yangiliklar</h3>
+              <div class="sidebar-item recent-posts">
+                {% for blog in blog %}
+                <div class="post-item clearfix">
+                  <img src="{{ blog.img }}" alt="">
+                  <h4><a href="{% url 'detail' blog.pk %}">{{ blog.title }}</a></h4>
+                  <time>{{ blog.sana }}</time>
+                </div>
+                {% endfor %}
+            
+
+           
+
+              </div><!-- End sidebar recent posts-->
+
+              <div id="ads" class="d-flex justify-content-center">
+                  <img class="w-100" src="assets/img/ads/Reklama1.html" alt="">
+              </div>
+              <div id="ads" class="d-flex justify-content-center">
+                <img class="w-100" src="assets/img/ads/reklma2.html" alt="">
+              </div>
+              <div id="ads" class="d-flex justify-content-center">
+                <img id="ads" class="w-100" src="assets/img/ads/Reklama2.html" alt="">
+              </div>
+
+            </div><!-- End sidebar -->
+
+          </div><!-- End blog sidebar -->
+
+        </div>
+
+      </div>
+    </section><!-- End Blog Section -->
+
+
+    
+  </main><!-- End #main -->
+{% endblock content %}

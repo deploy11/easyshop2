@@ -1,0 +1,171 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+      <div class="container">
+        <ol>
+          <li><a href="{% url 'home' %}">Home</a></li>
+          <li>About Us</li>
+        </ol>
+        <h2>About Us</h2>
+      </div>
+    </section><!-- End Breadcrumbs -->
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-lg-6">
+            <img src="{% static 'assets/img/about/about.jpg' %}" class="img-fluid" alt="">
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0 content">
+            <h3 style="margin: 10px;">Sirdaryo viloyati Shirin shahar</h3>
+            <p style="margin: 10px;">
+              Shirin — Sirdaryo viloyatidagi shahar (1972-yildan). Viloyatga boʻysunadi. Yaqin temir yoʻl stansiyasi — Farhod (6 km). Viloyat markazidan 52 km. Urtacha 328 m balandlikda. Aholisi 15,3 ming kishi (2003). Shaharda Farhod GES, Sirdaryo issiqlik elektr styasi, savdo va maishiy xizmat koʻrsatish shoxobchalari mashinasozlik zavodi, sutkasiga 7 t non va non mahsulotlari ishlab chiqaradigan korxona, spirt zavodi va boshqalar, shuningdek, 60 tadan ziyod turli shakldagi xususiy va kichik korxonalar bor. Sirdaryo qurilish boshqarmasi ham shahrida joylashgan. Shaharda 4 umumiy taʼlim maktabi, 1 musiqa maktabi, 2 kasbhunar kolleji, teatr, „Shirin“ shahar bozori, 5 kutubxona, 2 muzey, kasalxona (140 oʻrin), bolalar kasalxonasi, vrachlik sogʻlomlashtirish punkti, 2 qishloq vrachlik ambulatoriyasi, 2 feldsherakusherlik punkti, dorixona, „Xavotog“ sanatoriysi, madaniyat va istirohat bogʻi, Xotira bogʻi mavjud.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
+
+
+     <!-- ======= Counts Section ======= -->
+     <section id="counts" class="counts">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-3 col-md-6">
+            <div class="count-box">
+              <i class="bi bi-cart-check" ></i>
+              <div>
+                <span data-purecounter-start="0" data-purecounter-end="14" data-purecounter-duration="1" class="purecounter"></span>
+                <p>Do'konlar</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="count-box">
+              <i class="bi bi-cup-hot" style="color: #ee6c20;"></i>
+              <div>
+                <span data-purecounter-start="0" data-purecounter-end="9" data-purecounter-duration="1" class="purecounter"></span>
+                <p>Kafe va Restoranlar</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="count-box">
+              <i class="bi bi-fuel-pump" style="color: #15be56;"></i>
+              <div>
+                <span data-purecounter-start="0" data-purecounter-end="3" data-purecounter-duration="1" class="purecounter"></span>
+                <p>Yoqilg'i shahobchalari</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="count-box">
+              <i class="bi bi-bank" style="color: #bb0852;"></i>
+              <div>
+                <span data-purecounter-start="0" data-purecounter-end="1" data-purecounter-duration="0" class="purecounter"></span>
+                <p>Banklar</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Counts Section -->
+
+
+    
+    <!-- ======= Download Section ======= -->
+    <section id="downlaod" class="download">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+            <div class="icon-box">
+              <div class="icon"><i class="bi bi-laptop"></i></div>
+              <h4><a href="#">Windows App</a></h4>
+              <p>
+                OC: Windows 7/8/10;
+                Processor: Intel Core i3;
+                RAM: 4GB;
+                Hard disk space: 12 GB
+              </p>
+               <button onclick="download()" class="btn btn-danger"><i class="bi bi-download"></i> Download</button>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
+            <div class="icon-box">
+              <div class="icon"><i class="bi bi-android2"></i></div>
+              <h4><a href="#">Andoid App</a></h4>
+              <p>
+                Andoid version: Andoid 5 + and other;
+                RAM: 4GB;
+                Hard disk space: 8 GB
+
+              </p>
+              <button onclick="download()" class="btn btn-danger"><i class="bi bi-download"></i> Download</button>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
+            <div class="icon-box">
+              <div class="icon"><i class="bi bi-apple"></i></div>
+              <h4><a href="#">iOS App</a></h4>
+              <p>
+                OC: iOS 12 +;
+                Model: Iphone 5 + and other:
+                RAM: 4GB;
+                Hard disk space: 8 GB
+              </p>
+              <button onclick="download()" class="btn btn-danger"><i class="bi bi-download"></i> Download</button>
+            </div>
+          </div>
+
+        
+        </div>
+
+      </div>
+    </section><!-- End Download Section -->
+
+
+
+    <!-- ======= xizmatlar Section ======= -->
+    <section id="clients" class="clients">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Xizmatlar</h2> 
+        </div>
+
+        <div class="clients-slider swiper">
+          <div class="swiper-wrapper align-items-center">
+            <div class="swiper-slide"><img src="{% static 'assets/img/xizmatlar/xizmatlar-1.png' %}" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="{% static 'assets/img/xizmatlar/xizmatlar-2.png' %}" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="{% static 'assets/img/xizmatlar/xizmatlar-3.png' %}" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="{% static 'assets/img/xizmatlar/xizmatlar-4.png' %}" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="{% static 'assets/img/xizmatlar/xizmatlar-5.png' %}" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="{% static 'assets/img/xizmatlar/xizmatlar-6.png' %}" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="{% static 'assets/img/xizmatlar/xizmatlar-7.png' %}" class="img-fluid" alt=""></div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+    </section><!-- End xizmatlar Section -->
+
+
+  </main><!-- End #main -->
+{% endblock content %}

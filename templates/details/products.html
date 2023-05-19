@@ -1,0 +1,97 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+     
+        <main id="main">
+ 
+            <!-- ======= Breadcrumbs ======= -->
+            <section id="breadcrumbs" class="breadcrumbs">
+              <div class="container">
+                <ol>
+                  <li><a href="index.html">Home</a></li>
+                  <li>Services</li>
+                </ol>
+                <h2>Services</h2>
+              </div>
+            </section><!-- End Breadcrumbs -->
+          <!-- ======= Portfolio Details Section ======= -->
+     <section id="portfolio-details" class="portfolio-details">
+        <div class="container">
+  
+          <div class="row gy-4">
+  
+            <div class="col-lg-8">
+              <div class="portfolio-details-slider swiper">
+                <div class="swiper-wrapper align-items-center">
+  
+                  <img src="{{ catigory.image.url }}" alt="">
+  
+                
+  
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
+            </div>
+  
+            <div class="col-lg-4">
+              <div class="portfolio-info">
+                <h3>Ma'lumot uchun</h3>
+                <ul>
+                  <li><strong>Nomi</strong>:{{ catigory.name }}</li>
+                  <li><strong>Ish vaqti</strong>{{ catigory.ish_vaqti }}</li>
+                  <li><strong>Ish kunlari</strong>{{ catigory.ish_kunlari }}</li>
+                  <li><strong>tel</strong>{{ catigory.tel }}</li>
+                  <li><strong>telegram:</strong>{{ catigory.telegrma }}</li>
+                </ul>
+              </div>
+            </div>
+  
+          </div>
+  
+        </div>
+      </section><!-- End Portfolio Details Section -->
+    
+        
+                <!-- ======= Popular Courses Section ======= -->
+                <section id="popular-courses" class="courses">
+                  <div class="container" data-aos="fade-up">
+            
+                    <div class="section-title">
+                      <h2>Product</h2>
+                    </div>
+            
+                  <div class="row" data-aos="zoom-in" data-aos-delay="100">
+                    {% for i in snakers %}
+                      <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                        <div class="course-item" style="width: 700px;">
+                          <img id="product" src="{{ i.image.url }}" class="img-fluid" alt="...">
+                          <div class="course-content">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                              <button><h4><a href="{% url 'single' pk=i.id %}" style="color: aliceblue;">Buy</a></h4></button>
+                              <p class="price">{{ i.price }} {{ i.price_type }}</p>
+                            </div>
+                         
+                            <h3><a>{{ i.name }}</a></h3>
+                            <p>{{ i.more }}</p>
+                            <div class="trainer d-flex justify-content-between align-items-center">
+                              <div class="trainer-profile d-flex align-items-center">
+                                <span>{{ catigory.name }}</span>
+                              </div>
+                              <div class="trainer-rank d-flex align-items-center">
+                                <i class="bx bx-user"></i>&nbsp;50
+                                &nbsp;&nbsp;
+                                <i class="bx bx-heart"></i>&nbsp;65
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div> <!-- End Course Item-->
+                      {% endfor %}   
+                      
+                    </div>
+            
+                  </div>
+                </section><!-- End Popular Courses Section -->
+                
+          </main><!-- End #main -->
+{% endblock content %}
